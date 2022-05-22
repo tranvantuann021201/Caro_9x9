@@ -1,0 +1,11 @@
+D:\Learning\C#\BTL\caro_9x9\co_Caro_9x9\co_Caro_9x9\obj\Debug\co_Caro_9x9.csproj.AssemblyReference.cache
+D:\Learning\C#\BTL\caro_9x9\co_Caro_9x9\co_Caro_9x9\obj\Debug\co_Caro_9x9.csproj.SuggestedBindingRedirects.cache
+D:\Learning\C#\BTL\caro_9x9\co_Caro_9x9\co_Caro_9x9\obj\Debug\co_Caro_9x9.Form1.resources
+D:\Learning\C#\BTL\caro_9x9\co_Caro_9x9\co_Caro_9x9\obj\Debug\co_Caro_9x9.Properties.Resources.resources
+D:\Learning\C#\BTL\caro_9x9\co_Caro_9x9\co_Caro_9x9\obj\Debug\co_Caro_9x9.csproj.GenerateResource.cache
+D:\Learning\C#\BTL\caro_9x9\co_Caro_9x9\co_Caro_9x9\obj\Debug\co_Caro_9x9.csproj.CoreCompileInputs.cache
+D:\Learning\C#\BTL\caro_9x9\co_Caro_9x9\co_Caro_9x9\bin\Debug\co_Caro_9x9.exe.config
+D:\Learning\C#\BTL\caro_9x9\co_Caro_9x9\co_Caro_9x9\bin\Debug\co_Caro_9x9.exe
+D:\Learning\C#\BTL\caro_9x9\co_Caro_9x9\co_Caro_9x9\bin\Debug\co_Caro_9x9.pdb
+D:\Learning\C#\BTL\caro_9x9\co_Caro_9x9\co_Caro_9x9\obj\Debug\co_Caro_9x9.exe
+D:\Learning\C#\BTL\caro_9x9\co_Caro_9x9\co_Caro_9x9\obj\Debug\co_Caro_9x9.pdb

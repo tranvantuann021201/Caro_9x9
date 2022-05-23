@@ -105,6 +105,27 @@ namespace co_Caro_9x9
                     KiemTra_KetThuc(buttons[j, i]);
                 }
             }
+
+            //Đường chéo góc trên trái -> dưới phải "\"
+            for (int k = 0; k < 9; k++)
+            {
+                winnerButtons = new List<Button>();
+                for (int i = k, j = 0; i < 9; i++, j++)
+                {
+                    KiemTra_KetThuc(buttons[i, j]);
+                }
+
+                winnerButtons = new List<Button>();
+                for (int i = 0, j = k; j < 9; i++, j++)
+                {
+                    if(i==0)
+                    {
+                        continue;
+                    }
+                    KiemTra_KetThuc(buttons[i, j]);
+                }
+            }
+
             //Game hòa
             foreach (var button in buttons)
             {

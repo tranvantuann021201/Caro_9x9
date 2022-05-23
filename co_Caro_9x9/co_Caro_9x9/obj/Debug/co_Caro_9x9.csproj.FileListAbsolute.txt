@@ -9,3 +9,14 @@ D:\Learning\C#\BTL\caro_9x9\co_Caro_9x9\co_Caro_9x9\bin\Debug\co_Caro_9x9.exe
 D:\Learning\C#\BTL\caro_9x9\co_Caro_9x9\co_Caro_9x9\bin\Debug\co_Caro_9x9.pdb
 D:\Learning\C#\BTL\caro_9x9\co_Caro_9x9\co_Caro_9x9\obj\Debug\co_Caro_9x9.exe
 D:\Learning\C#\BTL\caro_9x9\co_Caro_9x9\co_Caro_9x9\obj\Debug\co_Caro_9x9.pdb
+C:\Users\Admin\Documents\GitHub\Caro_9x9\co_Caro_9x9\co_Caro_9x9\bin\Debug\co_Caro_9x9.exe.config
+C:\Users\Admin\Documents\GitHub\Caro_9x9\co_Caro_9x9\co_Caro_9x9\bin\Debug\co_Caro_9x9.exe
+C:\Users\Admin\Documents\GitHub\Caro_9x9\co_Caro_9x9\co_Caro_9x9\bin\Debug\co_Caro_9x9.pdb
+C:\Users\Admin\Documents\GitHub\Caro_9x9\co_Caro_9x9\co_Caro_9x9\obj\Debug\co_Caro_9x9.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\Caro_9x9\co_Caro_9x9\co_Caro_9x9\obj\Debug\co_Caro_9x9.csproj.SuggestedBindingRedirects.cache
+C:\Users\Admin\Documents\GitHub\Caro_9x9\co_Caro_9x9\co_Caro_9x9\obj\Debug\co_Caro_9x9.Form1.resources
+C:\Users\Admin\Documents\GitHub\Caro_9x9\co_Caro_9x9\co_Caro_9x9\obj\Debug\co_Caro_9x9.Properties.Resources.resources
+C:\Users\Admin\Documents\GitHub\Caro_9x9\co_Caro_9x9\co_Caro_9x9\obj\Debug\co_Caro_9x9.csproj.GenerateResource.cache
+C:\Users\Admin\Documents\GitHub\Caro_9x9\co_Caro_9x9\co_Caro_9x9\obj\Debug\co_Caro_9x9.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\GitHub\Caro_9x9\co_Caro_9x9\co_Caro_9x9\obj\Debug\co_Caro_9x9.exe
+C:\Users\Admin\Documents\GitHub\Caro_9x9\co_Caro_9x9\co_Caro_9x9\obj\Debug\co_Caro_9x9.pdb

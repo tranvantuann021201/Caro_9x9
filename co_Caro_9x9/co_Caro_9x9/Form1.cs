@@ -17,9 +17,9 @@ namespace co_Caro_9x9
             InitializeComponent();
         }
 
+        //Bàn cơ 9x9 xuất hiện mỗi khi form được load lên
         private void Form1_Load(object sender, EventArgs e)
         {
-            //Bàn cơ 9x9 xuất hiện mỗi khi form được load lên
             BanCo_9x9();
         }
         //Tạo 1 biến để tính tỉ số trận đấu
@@ -52,7 +52,7 @@ namespace co_Caro_9x9
         }
 
         //Tạo hàm để bắt sự kiện click cho Button
-        void button_Click(object sender, EventArgs e)
+        private void button_Click(object sender, EventArgs e)
         {
             //Gán đối tượng đc click vào biến button
             Button button = sender as Button;
@@ -69,6 +69,7 @@ namespace co_Caro_9x9
             LuotDi();
         }
 
+        //Hiển thị lượt đi tiếp theo là của X hay O lên Button thông báo lượt đi
         private void LuotDi()
         {
             DieuKien_KetThuc();
@@ -88,6 +89,8 @@ namespace co_Caro_9x9
         //Tạo ra một list Button để chứa những Button có kiệu X/O giống nhau
         List<Button> winnerButtons = new List<Button>();
 
+        //Hàm điều kiện để kết thúc ván đấu(Thắng/Thua/Hòa)
+        //5 trường hợp: Hàng ngang, hàng dọc, 2 Đường chéo và ván đấu hòa
         private void DieuKien_KetThuc()
         {
             //Hàng dọc
@@ -118,50 +121,47 @@ namespace co_Caro_9x9
 
                 //Cần tạo mới list Button cho mỗi lần xét điều kiện.
                 winnerButtons = new List<Button>();
-                //Xét nửa trên của Bàn cờ theo đường chéo chính
+                //Xét nửa trên của Bàn cờ theo đường chéo chính (Bao gồm đường chéo chính)
                 for (int i = k, j = 0; i < 9; i++, j++)
                 {
-                    //Lệnh rẽ nhánh, tránh trường hợp 2 vòng for cùng xét điều kiện kết thúc của đường chéo chính
-                    if (j == 0)
-                    {
-                        continue;
-                    }
-                    else
-                        KiemTra_KetThuc(buttons[i, j]);
-
+                    KiemTra_KetThuc(buttons[i, j]);
                 }
-                
+
                 //Xét nửa dưới của Bàn cờ theo đường chéo chính
                 winnerButtons = new List<Button>();
                 for (int i = 0, j = k; j < 9; i++, j++)
                 {
-                    KiemTra_KetThuc(buttons[i, j]);
+                    //Bỏ qua đường chéo chính
+                    if(i == 0 && j == 0)
+                    {
+                        continue;
+                    }
 
+                    KiemTra_KetThuc(buttons[i, j]);
                 }
             }
 
             //Đường chéo góc trên phải -> dưới trái "\"
             for (int k = 0; k < 9; k ++)
             {
+                //Nửa trên bên phải (Bao gồm đường chéo chính)
                 winnerButtons = new List<Button>();
                 for (int i = 8, j = k; j < 9; i--, j++)
                 {
                     KiemTra_KetThuc(buttons[i, j]);
-
                 }
 
+                //Nửa dưới bên trái
                 winnerButtons = new List<Button>();
                 for (int i = k, j = 0; i >= 0; i--, j++)
                 {
-                    //Lệnh rẽ nhánh, tránh trường hợp 2 vòng for cùng xét điều kiện kết thúc của đường chéo chính
-                    if (i == 8)
-                    //Dsach Button từ 0-8 theo hàng ngang,
-                    //vị trí button thứ 8 sẽ là điểm bắt đầu của đường chéo chính
+                    //Bỏ qua đường chéo chính
+                    if(i == 8)
                     {
                         continue;
                     }
-                    else KiemTra_KetThuc(buttons[i, j]);
-                }         
+                    KiemTra_KetThuc(buttons[i, j]);
+                }
             }
             //Game hòa:
             //Vòng foreach xét từng vị trí của Bàn cờ

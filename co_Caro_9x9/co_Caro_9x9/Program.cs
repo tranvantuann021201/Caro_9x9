@@ -16,7 +16,7 @@ namespace co_Caro_9x9
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new form1());
         }
     }
 }

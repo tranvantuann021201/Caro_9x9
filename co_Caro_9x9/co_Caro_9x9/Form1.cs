@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace co_Caro_9x9
 {
-    public partial class Form1 : Form
+    public partial class form1 : Form
     {
-        public Form1()
+        public form1()
         {
             InitializeComponent();
         }
@@ -26,14 +26,14 @@ namespace co_Caro_9x9
         int demTiso;
 
         //Khởi tạo mảng Button 2 chiều để vẽ bàn cờ
-        Button[,] buttons = new Button[9, 9];
+        Button[,] buttons = new Button[27, 27];
 
         //Vẽ bàn cờ
         private void BanCo_9x9()
         {
-            for (int i = 0; i < 9; i++)
+            for (int i = 0; i < 27; i++)
             {
-                for (int j = 0; j < 9; j++)
+                for (int j = 0; j < 27; j++)
                 {
                     //Khởi tạo ô, chỉnh thuộc tính của btn.
                     buttons[i, j] = new Button();
@@ -94,7 +94,7 @@ namespace co_Caro_9x9
         private void DieuKien_KetThuc()
         {
             //Hàng dọc
-            for (int i = 0; i < 9; i++)
+            for (int i = 0; i < 27; i++)
             {
                 winnerButtons = new List<Button>();
                 for (int j = 0; j < 9; j++)
@@ -104,7 +104,7 @@ namespace co_Caro_9x9
             }
 
             //Hàng ngang
-            for (int i = 0; i < 9; i++)
+            for (int i = 0; i < 27; i++)
             {
                 winnerButtons = new List<Button>();
                 for (int j = 0; j < 9; j++)
@@ -114,7 +114,7 @@ namespace co_Caro_9x9
             }
 
             //Đường chéo góc trên trái -> dưới phải "\"
-            for (int k = 0; k < 9; k++)
+            for (int k = 0; k < 27; k++)
             {
                 //Mỗi vòng for con sẽ xét điều kiện kết thúc trên 1 nửa ma trận,
                 //ngăn cách nhau bởi đường chéo chính 
@@ -122,7 +122,7 @@ namespace co_Caro_9x9
                 //Cần tạo mới list Button cho mỗi lần xét điều kiện.
                 winnerButtons = new List<Button>();
                 //Xét nửa trên của Bàn cờ theo đường chéo chính (Bao gồm đường chéo chính)
-                for (int i = k, j = 0; i < 9; i++, j++)
+                for (int i = k, j = 0; i < 27; i++, j++)
                 {
                     KiemTra_KetThuc(buttons[i, j]);
                 }
@@ -132,8 +132,9 @@ namespace co_Caro_9x9
                 for (int i = 0, j = k; j < 9; i++, j++)
                 {
                     //Bỏ qua đường chéo chính
-                    if(i == 0 && j == 0)
+                    if(i == j)
                     {
+
                         continue;
                     }
 
@@ -142,11 +143,11 @@ namespace co_Caro_9x9
             }
 
             //Đường chéo góc trên phải -> dưới trái "\"
-            for (int k = 0; k < 9; k ++)
+            for (int k = 0; k < 27; k ++)
             {
                 //Nửa trên bên phải (Bao gồm đường chéo chính)
                 winnerButtons = new List<Button>();
-                for (int i = 8, j = k; j < 9; i--, j++)
+                for (int i = 26, j = k; j < 27; i--, j++)
                 {
                     KiemTra_KetThuc(buttons[i, j]);
                 }
@@ -156,7 +157,7 @@ namespace co_Caro_9x9
                 for (int i = k, j = 0; i >= 0; i--, j++)
                 {
                     //Bỏ qua đường chéo chính
-                    if(i == 8)
+                    if(i == j)
                     {
                         continue;
                     }
@@ -246,9 +247,9 @@ namespace co_Caro_9x9
         //Hàm tạo bàn cờ mới
         private void reset()
         {
-            for (int i = 0; i < 9; i++)
+            for (int i = 0; i < 27; i++)
             {
-                for (int j = 0; j < 9; j++)
+                for (int j = 0; j < 27; j++)
                 {
                     buttons[i, j].Enabled = true;
                     buttons[i, j].Text = "";
@@ -281,13 +282,62 @@ namespace co_Caro_9x9
         //Hàm không cho phép người dùng tác động lên bàn cờ
         private void DungMoiHoatDong()
         {
-            for (int i = 0; i < 9; i++)
+            for (int i = 0; i < 27; i++)
             {
-                for (int j = 0; j < 9; j++)
+                for (int j = 0; j < 27; j++)
                 {
                     buttons[i, j].Enabled = false;
                 }
             }
+        }
+
+        //Giao diện
+        //Sáng
+        private void gd_Sang()
+        {
+            menuStrip1.BackColor = Color.WhiteSmoke;
+            panel1.BackColor = Color.White;
+            lb_LuotDi.BackColor = Color.White;
+            //tableLayoutPanel1.BackColor = Color.Gray;
+            this.BackColor = Color.White;
+            lb_tinhDiemO.BackColor = Color.White;
+            lb_tinhDiemX.BackColor = Color.White;
+            label1.BackColor = Color.White;
+            label2.BackColor = Color.White;
+            label4.BackColor = Color.White;
+            btn_LuotDi.BackColor = Color.Gainsboro;
+            btn_choiLai.BackColor = Color.Gainsboro;
+            btn_choiMoi.BackColor = Color.Gainsboro;
+            btn_Thoat.BackColor = Color.Gainsboro;
+        }
+
+        //Tối
+        private void gd_Toi()
+        {
+            menuStrip1.BackColor = Color.DimGray;
+            panel1.BackColor = Color.DimGray;
+            lb_LuotDi.BackColor = Color.DimGray;
+            //tableLayoutPanel1.BackColor = Color.Gray;
+            this.BackColor = Color.Gray;
+            lb_tinhDiemO.BackColor = Color.DimGray;
+            lb_tinhDiemX.BackColor = Color.DimGray;
+            label1.BackColor = Color.DimGray;
+            label2.BackColor = Color.DimGray;
+            label4.BackColor = Color.DimGray;
+            btn_LuotDi.BackColor= Color.DimGray;
+            btn_choiLai.BackColor = Color.DimGray;
+            btn_choiMoi.BackColor = Color.DimGray;
+            btn_Thoat.BackColor = Color.DimGray;
+        }
+
+        private void giaoDiệnTốiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            gd_Toi();
+        }
+
+        private void giaoDiệnSángToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            gd_Sang();
         }
     }
 }

@@ -97,7 +97,7 @@ namespace co_Caro_9x9
             for (int i = 0; i < 30; i++)
             {
                 winnerButtons = new List<Button>();
-                for (int j = 0; j < 9; j++)
+                for (int j = 0; j < 30; j++)
                 {
                     KiemTra_KetThuc(buttons[i, j]);
                 }
@@ -107,7 +107,7 @@ namespace co_Caro_9x9
             for (int i = 0; i < 30; i++)
             {
                 winnerButtons = new List<Button>();
-                for (int j = 0; j < 9; j++)
+                for (int j = 0; j < 30; j++)
                 {
                     KiemTra_KetThuc(buttons[j, i]);
                 }
@@ -328,6 +328,18 @@ namespace co_Caro_9x9
             btn_Thoat.BackColor = Color.Gainsboro;
 
             giaodien = true;
+
+            giaoDiệnToolStripMenuItem.ForeColor = Color.Black;
+            lb_LuotDi.ForeColor = Color.Black;
+            label1.ForeColor = Color.Black;
+            label2.ForeColor = Color.Black;
+            label4.ForeColor = Color.Black;
+            lb_tinhDiemO.ForeColor = Color.Black;
+            lb_tinhDiemX.ForeColor = Color.Black;
+
+            btn_choiMoi.ForeColor = Color.Black;
+            btn_choiLai.ForeColor = Color.Black;
+            btn_Thoat.ForeColor = Color.Black;
         }
 
         //Tối

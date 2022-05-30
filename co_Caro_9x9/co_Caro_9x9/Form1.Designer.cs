@@ -60,7 +60,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 25);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(699, 451);
+            this.panel1.Size = new System.Drawing.Size(790, 500);
             this.panel1.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -75,7 +75,7 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.btn_choiLai, 0, 4);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(451, 25);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(542, 25);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 8;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.69231F));
@@ -86,7 +86,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(248, 451);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(248, 500);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // btn_Thoat
@@ -94,7 +94,7 @@
             this.btn_Thoat.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_Thoat.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_Thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Thoat.Location = new System.Drawing.Point(3, 356);
+            this.btn_Thoat.Location = new System.Drawing.Point(3, 406);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(242, 44);
             this.btn_Thoat.TabIndex = 6;
@@ -107,7 +107,7 @@
             this.btn_choiMoi.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_choiMoi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_choiMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_choiMoi.Location = new System.Drawing.Point(3, 306);
+            this.btn_choiMoi.Location = new System.Drawing.Point(3, 356);
             this.btn_choiMoi.Name = "btn_choiMoi";
             this.btn_choiMoi.Size = new System.Drawing.Size(242, 44);
             this.btn_choiMoi.TabIndex = 5;
@@ -119,7 +119,7 @@
             // 
             this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(3, 148);
+            this.panel3.Location = new System.Drawing.Point(3, 198);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(242, 36);
             this.panel3.TabIndex = 2;
@@ -143,9 +143,9 @@
             this.btn_LuotDi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_LuotDi.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_LuotDi.ForeColor = System.Drawing.Color.Red;
-            this.btn_LuotDi.Location = new System.Drawing.Point(3, 43);
+            this.btn_LuotDi.Location = new System.Drawing.Point(3, 57);
             this.btn_LuotDi.Name = "btn_LuotDi";
-            this.btn_LuotDi.Size = new System.Drawing.Size(242, 99);
+            this.btn_LuotDi.Size = new System.Drawing.Size(242, 135);
             this.btn_LuotDi.TabIndex = 0;
             this.btn_LuotDi.Text = "X";
             this.btn_LuotDi.UseVisualStyleBackColor = false;
@@ -156,7 +156,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(242, 34);
+            this.panel2.Size = new System.Drawing.Size(242, 48);
             this.panel2.TabIndex = 1;
             // 
             // lb_LuotDi
@@ -167,7 +167,7 @@
             this.lb_LuotDi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_LuotDi.Location = new System.Drawing.Point(0, 0);
             this.lb_LuotDi.Name = "lb_LuotDi";
-            this.lb_LuotDi.Size = new System.Drawing.Size(242, 34);
+            this.lb_LuotDi.Size = new System.Drawing.Size(242, 48);
             this.lb_LuotDi.TabIndex = 4;
             this.lb_LuotDi.Text = "Lượt đi";
             this.lb_LuotDi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -182,7 +182,7 @@
             this.tableLayoutPanel2.Controls.Add(this.lb_tinhDiemO, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.label4, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 190);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 240);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -249,7 +249,7 @@
             this.btn_choiLai.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_choiLai.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_choiLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_choiLai.Location = new System.Drawing.Point(3, 258);
+            this.btn_choiLai.Location = new System.Drawing.Point(3, 308);
             this.btn_choiLai.Name = "btn_choiLai";
             this.btn_choiLai.Size = new System.Drawing.Size(242, 42);
             this.btn_choiLai.TabIndex = 4;
@@ -264,7 +264,7 @@
             this.giaoDiệnToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(699, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(790, 25);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -274,20 +274,20 @@
             this.giaoDiệnTốiToolStripMenuItem,
             this.giaoDiệnSángToolStripMenuItem});
             this.giaoDiệnToolStripMenuItem.Name = "giaoDiệnToolStripMenuItem";
-            this.giaoDiệnToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.giaoDiệnToolStripMenuItem.Size = new System.Drawing.Size(77, 21);
             this.giaoDiệnToolStripMenuItem.Text = "Giao diện";
             // 
             // giaoDiệnTốiToolStripMenuItem
             // 
             this.giaoDiệnTốiToolStripMenuItem.Name = "giaoDiệnTốiToolStripMenuItem";
-            this.giaoDiệnTốiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.giaoDiệnTốiToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.giaoDiệnTốiToolStripMenuItem.Text = "Giao diện Tối";
             this.giaoDiệnTốiToolStripMenuItem.Click += new System.EventHandler(this.giaoDiệnTốiToolStripMenuItem_Click);
             // 
             // giaoDiệnSángToolStripMenuItem
             // 
             this.giaoDiệnSángToolStripMenuItem.Name = "giaoDiệnSángToolStripMenuItem";
-            this.giaoDiệnSángToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.giaoDiệnSángToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.giaoDiệnSángToolStripMenuItem.Text = "Giao diện Sáng";
             this.giaoDiệnSángToolStripMenuItem.Click += new System.EventHandler(this.giaoDiệnSángToolStripMenuItem_Click);
             // 
@@ -296,14 +296,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(22F, 42F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(699, 476);
+            this.ClientSize = new System.Drawing.Size(790, 525);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(12, 10, 12, 10);
-            this.MaximumSize = new System.Drawing.Size(1655, 859);
+            this.MaximumSize = new System.Drawing.Size(1655, 860);
             this.Name = "form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cờ Caro";

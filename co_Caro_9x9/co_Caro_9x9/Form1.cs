@@ -26,19 +26,19 @@ namespace co_Caro_9x9
         int demTiso;
 
         //Khởi tạo mảng Button 2 chiều để vẽ bàn cờ
-        Button[,] buttons = new Button[27, 27];
+        Button[,] buttons = new Button[30, 30];
 
         //Vẽ bàn cờ
         private void BanCo_9x9()
         {
-            for (int i = 0; i < 27; i++)
+            for (int i = 0; i < 30; i++)
             {
-                for (int j = 0; j < 27; j++)
+                for (int j = 0; j < 30; j++)
                 {
                     //Khởi tạo ô, chỉnh thuộc tính của btn.
                     buttons[i, j] = new Button();
-                    buttons[i, j].Size = new Size(50, 50);
-                    buttons[i, j].Location = new Point(i * 50, j * 50);
+                    buttons[i, j].Size = new Size(45, 45);
+                    buttons[i, j].Location = new Point(i * 45, j * 45);
                     buttons[i, j].FlatStyle = FlatStyle.Flat;
                     buttons[i, j].Font = new System.Drawing.Font(DefaultFont.FontFamily, 25, FontStyle.Bold);
 
@@ -94,7 +94,7 @@ namespace co_Caro_9x9
         private void DieuKien_KetThuc()
         {
             //Hàng dọc
-            for (int i = 0; i < 27; i++)
+            for (int i = 0; i < 30; i++)
             {
                 winnerButtons = new List<Button>();
                 for (int j = 0; j < 9; j++)
@@ -104,7 +104,7 @@ namespace co_Caro_9x9
             }
 
             //Hàng ngang
-            for (int i = 0; i < 27; i++)
+            for (int i = 0; i < 30; i++)
             {
                 winnerButtons = new List<Button>();
                 for (int j = 0; j < 9; j++)
@@ -114,7 +114,7 @@ namespace co_Caro_9x9
             }
 
             //Đường chéo góc trên trái -> dưới phải "\"
-            for (int k = 0; k < 27; k++)
+            for (int k = 0; k < 30; k++)
             {
                 //Mỗi vòng for con sẽ xét điều kiện kết thúc trên 1 nửa ma trận,
                 //ngăn cách nhau bởi đường chéo chính 
@@ -122,14 +122,14 @@ namespace co_Caro_9x9
                 //Cần tạo mới list Button cho mỗi lần xét điều kiện.
                 winnerButtons = new List<Button>();
                 //Xét nửa trên của Bàn cờ theo đường chéo chính (Bao gồm đường chéo chính)
-                for (int i = k, j = 0; i < 27; i++, j++)
+                for (int i = k, j = 0; i < 30; i++, j++)
                 {
                     KiemTra_KetThuc(buttons[i, j]);
                 }
 
                 //Xét nửa dưới của Bàn cờ theo đường chéo chính
                 winnerButtons = new List<Button>();
-                for (int i = 0, j = k; j < 9; i++, j++)
+                for (int i = 0, j = k; j < 30; i++, j++)
                 {
                     //Bỏ qua đường chéo chính
                     if(i == j)
@@ -143,11 +143,11 @@ namespace co_Caro_9x9
             }
 
             //Đường chéo góc trên phải -> dưới trái "\"
-            for (int k = 0; k < 27; k ++)
+            for (int k = 0; k < 30; k ++)
             {
                 //Nửa trên bên phải (Bao gồm đường chéo chính)
                 winnerButtons = new List<Button>();
-                for (int i = 26, j = k; j < 27; i--, j++)
+                for (int i = 29, j = k; j < 30; i--, j++)
                 {
                     KiemTra_KetThuc(buttons[i, j]);
                 }
@@ -247,9 +247,9 @@ namespace co_Caro_9x9
         //Hàm tạo bàn cờ mới
         private void reset()
         {
-            for (int i = 0; i < 27; i++)
+            for (int i = 0; i < 30; i++)
             {
-                for (int j = 0; j < 27; j++)
+                for (int j = 0; j < 30; j++)
                 {
                     buttons[i, j].Enabled = true;
                     buttons[i, j].Text = "";
@@ -257,6 +257,13 @@ namespace co_Caro_9x9
                     buttons[i, j].BackColor = Color.White;
                 }
             }
+
+            if (giaodien)
+            {
+                gd_Sang();
+            }
+            else
+                gd_Toi();
         }
 
         private void lb_tinhDiemX_Click(object sender, EventArgs e)
@@ -282,9 +289,9 @@ namespace co_Caro_9x9
         //Hàm không cho phép người dùng tác động lên bàn cờ
         private void DungMoiHoatDong()
         {
-            for (int i = 0; i < 27; i++)
+            for (int i = 0; i < 30; i++)
             {
-                for (int j = 0; j < 27; j++)
+                for (int j = 0; j < 30; j++)
                 {
                     buttons[i, j].Enabled = false;
                 }
@@ -292,11 +299,21 @@ namespace co_Caro_9x9
         }
 
         //Giao diện
+        bool giaodien = true;
+
         //Sáng
         private void gd_Sang()
         {
             menuStrip1.BackColor = Color.WhiteSmoke;
-            panel1.BackColor = Color.White;
+            //panel1.BackColor = Color.White;
+            for (int i = 0; i < 30; i++)
+            {
+                for (int j = 0; j < 30; j++)
+                {
+                    buttons[i, j].BackColor = Color.White;
+                    buttons[i, j].ForeColor = Color.Black;
+                }
+            }
             lb_LuotDi.BackColor = Color.White;
             //tableLayoutPanel1.BackColor = Color.Gray;
             this.BackColor = Color.White;
@@ -309,13 +326,24 @@ namespace co_Caro_9x9
             btn_choiLai.BackColor = Color.Gainsboro;
             btn_choiMoi.BackColor = Color.Gainsboro;
             btn_Thoat.BackColor = Color.Gainsboro;
+
+            giaodien = true;
         }
 
         //Tối
         private void gd_Toi()
         {
             menuStrip1.BackColor = Color.DimGray;
-            panel1.BackColor = Color.DimGray;
+            //panel1.BackColor = Color.DimGray;
+            for (int i = 0; i < 30; i++)
+            {
+                for (int j = 0; j < 30; j++)
+                {
+                    buttons[i, j].BackColor = Color.DimGray;
+                    buttons[i, j].ForeColor = Color.WhiteSmoke;
+                }
+            }
+
             lb_LuotDi.BackColor = Color.DimGray;
             //tableLayoutPanel1.BackColor = Color.Gray;
             this.BackColor = Color.Gray;
@@ -328,6 +356,20 @@ namespace co_Caro_9x9
             btn_choiLai.BackColor = Color.DimGray;
             btn_choiMoi.BackColor = Color.DimGray;
             btn_Thoat.BackColor = Color.DimGray;
+
+            giaoDiệnToolStripMenuItem.ForeColor = Color.WhiteSmoke;
+            lb_LuotDi.ForeColor = Color.WhiteSmoke;
+            label1.ForeColor = Color.WhiteSmoke;
+            label2.ForeColor = Color.WhiteSmoke;
+            label4.ForeColor = Color.WhiteSmoke;
+            lb_tinhDiemO.ForeColor = Color.WhiteSmoke;
+            lb_tinhDiemX.ForeColor = Color.WhiteSmoke;
+
+            btn_choiMoi.ForeColor = Color.WhiteSmoke;
+            btn_choiLai.ForeColor = Color.WhiteSmoke;
+            btn_Thoat.ForeColor = Color.WhiteSmoke;
+
+            giaodien = false;
         }
 
         private void giaoDiệnTốiToolStripMenuItem_Click(object sender, EventArgs e)
